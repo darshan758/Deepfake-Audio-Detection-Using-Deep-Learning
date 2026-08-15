@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Audio | Deepfake Detector</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🎧 Deepfake Audio Detector</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html" onclick="logout()">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="upload-section">
+    <h2>Upload Your Audio</h2>
+    <form id="uploadForm" enctype="multipart/form-data">
+      <input type="file" name="file" accept=".wav" required>
+      <button type="submit">Analyze</button>
+    </form>
+
+    <div id="result"></div>
+  </section>
+
+  <script>
+    document.getElementById("uploadForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      const response = await fetch("http://127.0.0.1:5000/upload", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+      document.getElementById("result").innerHTML =
+        data.status === "success"
+          ? `<h3>🧠 Prediction: ${data.result}</h3>`
+          : `<p style="color:red;">${data.message}</p>`;
+    });
+  </script>
+</body>
+</html>

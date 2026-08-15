@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <h1>🎧 Deepfake Audio Detector</h1>
+    <ul>
+      <li><a class="nav-link" href="index.html">Home</a></li>
+      <li><a class="nav-link active" href="about.html">About Project</a></li>
+      <li><a class="nav-link" href="login.html">Login</a></li>
+      <li><a class="nav-link" href="register.html">Register</a></li>
+      <li><a class="nav-link" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="about">
+    <h2>About the Project</h2>
+    <p>
+      The <b>AI-Based DeepFake Audio Detection System</b> is designed to identify and prevent the misuse of synthetic or manipulated voices. 
+      Deepfake technology can clone voices with extreme accuracy, posing serious security and ethical challenges — our system helps counter this threat.
+    </p>
+
+    <h3>🎯 Objective</h3>
+    <p>
+      To develop a reliable and accurate detection model that can differentiate between <b>real</b> and <b>AI-generated (fake)</b> audio samples using advanced deep learning techniques.
+    </p>
+
+    <h3>🧠 Working Process</h3>
+    <ul>
+      <li>Users upload a <b>.wav</b> audio file through the web interface.</li>
+      <li>The system converts the audio into <b>MFCC (Mel-Frequency Cepstral Coefficients)</b> features — a key representation of sound frequencies.</li>
+      <li>These extracted features are passed into a trained <b>Deep Learning model</b> built using <b>PyTorch</b>.</li>
+      <li>The model analyzes frequency and spectral patterns that differ between <b>real human voices</b> and <b>synthetic voices</b>.</li>
+      <li>Finally, the system displays the prediction — whether the input audio is <b>REAL</b> or <b>FAKE</b> — along with confidence percentage.</li>
+    </ul>
+
+    <h3>⚙️ Technologies Used</h3>
+    <ul>
+      <li><b>Frontend:</b> HTML, CSS, JavaScript</li>
+      <li><b>Backend:</b> Python (Flask Framework)</li>
+      <li><b>Machine Learning:</b> PyTorch, Torchaudio</li>
+      <li><b>Audio Processing:</b> MFCC feature extraction, audio chunking</li>
+      <li><b>Dataset:</b> Real and AI-generated voice datasets (used for model training)</li>
+    </ul>
+
+    <h3>🚀 Key Features</h3>
+    <ul>
+      <li>Detects whether uploaded voice samples are real or fake</li>
+      <li>Displays prediction confidence percentage</li>
+      <li>Simple and user-friendly web interface</li>
+      <li>Model trained using real-world datasets for better accuracy</li>
+      <li>Scalable backend for integration into voice security systems</li>
+    </ul>
+
+    <h3>🔮 Future Scope</h3>
+    <ul>
+      <li>Support for multiple file formats (MP3, M4A, OGG, etc.)</li>
+      <li>Integration with live voice authentication systems</li>
+      <li>Improved detection using CNN + LSTM hybrid models</li>
+      <li>Deployment on cloud for real-time monitoring and analysis</li>
+    </ul>
+
+    <h3>📘 Summary</h3>
+    <p>
+      This project demonstrates the practical use of AI in the field of <b>audio forensics</b>. By analyzing the unique characteristics of voice signals, 
+      it helps detect deepfake voices and prevent misuse of voice cloning technologies in security, media, and digital communication.
+    </p>
+  </section>
+</body>
+</html>

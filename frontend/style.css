@@ -1,0 +1,252 @@
+/* ===============================
+   General Reset & Base Styles
+================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1e1f26, #2d2f39);
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* ===============================
+   Navbar
+================================*/
+.navbar {
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar h1 {
+  font-size: 1.5rem;
+  color: #00e0ff;
+  letter-spacing: 1px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #00e0ff;
+}
+
+/* ===============================
+   Home Section
+================================*/
+.home {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 2rem;
+}
+
+.home h2 {
+  font-size: 2rem;
+  color: #00e0ff;
+  margin-bottom: 1rem;
+}
+
+.home p {
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* ===============================
+   Upload Box
+================================*/
+.upload-box {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 224, 255, 0.2);
+}
+
+.upload-box h3 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: #00e0ff;
+}
+
+.upload-box input[type="file"] {
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  width: 80%;
+}
+
+.upload-box button {
+  background: #00e0ff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.upload-box button:hover {
+  background: #00b4cc;
+  transform: scale(1.05);
+}
+
+#result {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+/* ===============================
+   About Section
+================================*/
+.about {
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.7;
+}
+
+.about h2 {
+  text-align: center;
+  color: #00e0ff;
+  margin-bottom: 1.5rem;
+}
+
+.about ul {
+  margin-left: 2rem;
+}
+
+/* ===============================
+   Form Sections (Login/Register)
+================================*/
+.form-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.form-section h2 {
+  color: #00e0ff;
+  margin-bottom: 1rem;
+}
+
+form {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 224, 255, 0.2);
+  width: 90%;
+  max-width: 400px;
+}
+
+form input {
+  display: block;
+  width: 100%;
+  margin: 0.8rem 0;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+  font-size: 1rem;
+}
+
+form button {
+  background: #00e0ff;
+  color: #000;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #00b4cc;
+}
+
+/* ===============================
+   Contact Section
+================================*/
+.contact {
+  text-align: center;
+  padding: 3rem;
+}
+
+.contact h2 {
+  color: #00e0ff;
+  margin-bottom: 1rem;
+}
+
+.contact p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin: 0.5rem 0;
+}
+
+/* ===============================
+   Responsive Design
+================================*/
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .upload-box {
+    width: 95%;
+  }
+}
+
+#result {
+  margin-top: 1rem;
+  padding: 10px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  color: #00e0ff;
+  font-size: 1.1rem;
+}
+

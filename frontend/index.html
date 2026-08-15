@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deepfake Audio Detector</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <h1>🎧 Deepfake Audio Detector</h1>
+    <ul>
+      <li><a class="nav-link" href="index.html">Home</a></li>
+      <li><a class="nav-link" href="about.html">About Project</a></li>
+      <li><a class="nav-link" href="login.html">Login</a></li>
+      <li><a class="nav-link" href="register.html">Register</a></li>
+      <li><a class="nav-link" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="home">
+    <h2>Welcome to AI-Based Voice DeepFake Detection</h2>
+    <p>
+      Detect and prevent fake voices using advanced AI & ML models trained to spot manipulated speech.
+    </p>
+
+    <div class="upload-box">
+      <h3>Upload Your Voice Clip</h3>
+
+      <form id="uploadForm">
+        <input type="file" id="audioFile" accept=".wav" />
+        <button type="button" id="analyzeBtn">🔍 Analyze</button>
+      </form>
+
+      <!-- 🔊 Preview Added Here -->
+      <div id="audioPreview" style="margin-top:10px;"></div>
+
+      <div id="result"></div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
